@@ -1,0 +1,73 @@
+/* Reset CSS to remove margins and paddings from body and other container elements */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a global box-sizing border-box to all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cartItem {
+    width: 700px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: 30px;
+  }
+  
+  .cartItem img {
+    width: 200px;
+  }
+  
+  .cartItem .description {
+    width: 100%;
+    font-size: 30px;
+  }
+  
+  .countHandler input {
+    width: 40px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .checkout button {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .checkout p{
+    text-align: center;
+  }
+  /* For smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .cartItem {
+    width: 100%; /* Adjust the width to fit within the available space on mobile view */
+    max-width: 550px; /* Set a maximum width to avoid excessive stretching on larger mobile screens */
+    margin: 15px; /* Adjust the margin for better spacing on mobile */
+    margin-left: 0px;
+  }
+
+  .cartItem img {
+    width: 150px; /* Reduce the image width for mobile view */
+  }
+
+  .cartItem .description {
+    font-size: 24px; /* Adjust the font size for mobile view */
+  }
+}
